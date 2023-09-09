@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f1f1f1;
+    overflow: hidden; /* Hide any overflowing content outside the viewport */
+}
+
+.container {
+    position: relative; /* Create a stacking context for pseudo-element */
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    animation: pulse 5s infinite alternate; /* Add the pulsating glow effect to the background */
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 10px rgba(8, 174, 234, 0.7), 0 0 30px rgba(8, 174, 234, 0.7);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 20px rgba(8, 174, 234, 0.7), 0 0 60px rgba(8, 174, 234, 0.7);
+    }
+}
+
+h1 {
+    font-size: 36px;
+    background: linear-gradient(45deg, #08AEEA, #000);
+    -webkit-background-clip: text; /* Use text as a clipping mask */
+    color: transparent; /* Hide the text color */
+    animation: glowText 2s infinite alternate; /* Add the glowing text effect */
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(8, 174, 234, 0.7);
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.stopwatch {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: glow 2s infinite alternate; /* Add the glow effect */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.time {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+.control {
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.control:hover {
+    background-color: #005E82;
+}
+
+.laps {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap {
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lap span {
+    font-size: 16px;
+}
+
+.lap-time {
+    font-weight: bold;
+}
+
+/* Modern gradient background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #08AEEA, #2AF598);
+    z-index: -1;
+}
